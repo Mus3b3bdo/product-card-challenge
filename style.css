@@ -1,0 +1,134 @@
+/* custrom properities  */
+:root {
+  /* Primary Colors */
+  --Dark-cyan-color: hsl(158, 36%, 37%);
+  --Cream-color: hsl(30, 38%, 92%);
+  --active-state-color: hsl(156, 37%, 14%);
+  /* Neutral colors */
+  --Very-dark-blue-color: hsl(212, 21%, 14%);
+  --Dark-grayish-blue-color: rgb(108, 114, 137);
+  --White-color: hsl(0, 0%, 100%);
+}
+/* reset and general styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 14px;
+  background-color: var(--Cream-color);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+main {
+  display: grid;
+  place-items: center;
+  background-color: var(--Cream-color);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Card style */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+  min-height: 450px;
+  border-radius: 0.7rem;
+  box-shadow: 0px 0px 14px -3px var(--Dark-grayish-blue-color);
+  background-color: var(--White-color);
+}
+div > img {
+  height: 450px;
+  width: 300px;
+  border-radius: 0.7rem 0 0 0.7rem;
+}
+.right {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+h1 {
+  color: var(--Very-dark-blue-color);
+}
+#preview {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--Dark-grayish-blue-color);
+}
+#description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue-color);
+}
+#childflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+span + span {
+  color: var(--Dark-grayish-blue-color);
+  text-decoration: line-through;
+  margin-right: auto;
+}
+span:first-child {
+  color: var(--Dark-cyan-color);
+  font-size: 20px;
+  margin-right: auto;
+}
+button {
+  cursor: pointer;
+  padding: 0.7rem 0;
+  color: var(--White-color);
+  background-color: var(--Dark-cyan-color);
+  border-radius: 0.7rem;
+  border: none;
+  transition: backgroud-color 0.4s ease-in;
+}
+button:hover {
+  background-color: var(--active-state-color);
+}
+button:focus,
+button:focus-visible,
+button:focus-within {
+  outline: 2px solid var(--active-state-color);
+  outline-offset: 2px;
+}
+
+/* fotter Style */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media querey Mobile design  */
+
+@media (max-width: 375px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    max-width: 343px;
+    min-height: 610px;
+    border-radius: 0.7rem;
+    box-shadow: 0px 0px 14px -3px var(--Dark-grayish-blue-color);
+    background-color: var(--White-color);
+  }
+  div > img {
+    height: 238px;
+    width: 343px;
+    border-radius: 0.7rem 0.7rem 0 0;
+  }
+}
