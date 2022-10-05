@@ -48,7 +48,7 @@ div > img {
   border-radius: 0.7rem 0 0 0.7rem;
 }
 .right {
-  padding: 32px;
+  margin: 32px;
   display: flex;
   flex-direction: column;
   gap: 30px;
