@@ -43,13 +43,12 @@ main {
 }
 div > img {
   display: block;
-  min-height: 450px;
+  min-height: 482px;
   width: 300px;
   border-radius: 0.7rem 0 0 0.7rem;
 }
 .right {
   padding: 32px;
-  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
